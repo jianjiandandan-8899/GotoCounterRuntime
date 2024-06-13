@@ -1,5 +1,5 @@
 
-# Goto Counter
+# GotoCounterRuntime
 
 This project demonstrates how to use the Soot framework to count the number of `goto` statements executed at runtime in a Java file. In this example, we use `ForLoop.java` which contains multiple simulated `goto` statements using labeled loops and `break`/`continue`.
 
@@ -14,19 +14,18 @@ This project demonstrates how to use the Soot framework to count the number of `
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/yourusername/goto-counter.git
-   cd goto-counter
+   git clone [https://github.com/jianjiandandan-8899/GotoCounterRuntime.git]
    ```
 
 2. **Set up Soot**:
    - If you're using Maven, add the following dependency to your `pom.xml`:
 
      ```xml
-     <dependency>
-         <groupId>ca.mcgill.sable</groupId>
-         <artifactId>soot</artifactId>
-         <version>4.2.1</version>
-     </dependency>
+            <dependency>
+            <groupId>org.soot-oss</groupId>
+            <artifactId>soot</artifactId>
+            <version>4.5.0</version>
+        </dependency>
      ```
 
    - If not using Maven, download the Soot JAR and include it in your project's classpath.
@@ -42,7 +41,7 @@ This project demonstrates how to use the Soot framework to count the number of `
 2. **Run the `GotoCounter` tool to instrument the bytecode**:
 
    ```sh
-   java -cp .:path/to/sootclasses-trunk-jar-with-dependencies.jar GotoCounter
+   java -cp .:path/to/soot-4.5.0-jar-with-dependencies.jar GotoCounter
    ```
 
 3. **Run the instrumented `ForLoop` class**:
@@ -57,10 +56,10 @@ This project demonstrates how to use the Soot framework to count the number of `
 
 ```
 Breaking outer loop
-First loop done, count = 7
+First loop done, count = 12
 Breaking inner loop
-Second loop done, count = 15
-Goto statements executed: 2
+Second loop done, count = 20
+Goto statements executed: 0
 ```
 
 ## Explanation
